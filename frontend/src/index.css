@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* LIGHT MODE (Default) */
+    --color-brand-light: #F4F7F5;
+    --color-brand: #2C4C3B;
+    --color-brand-dark: #1A2F25;
+    --color-brand-accent: #D4AF37;
+    --color-brand-secondary: #8C9D8E;
+
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #666666;
+    --color-text-light: #999999;
+
+    --color-surface: #FDFBF7;
+    /* Warm white/cream */
+    --color-surface-off: #FAFAFA;
+    --color-surface-glass: rgba(255, 255, 255, 0.9);
+  }
+
+  .dark {
+    /* DARK MODE */
+    --color-brand-light: #1E2923;
+    --color-brand: #4A6C56;
+    /* Muted Emerald */
+    --color-brand-dark: #E2E8F0;
+    /* Soft off-white for headings in dark mode can be inverted or kept specific */
+    --color-brand-accent: #E5C35D;
+    /* Gold Glow */
+    --color-brand-secondary: #5C7060;
+
+    --color-text-primary: #F3F4F6;
+    /* Soft off-white */
+    --color-text-secondary: #9CA3AF;
+    --color-text-light: #6B7280;
+
+    --color-surface: #121212;
+    /* Rich Charcoal */
+    --color-surface-off: #1E1E1E;
+    --color-surface-glass: rgba(18, 18, 18, 0.9);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-text-primary font-sans antialiased transition-colors duration-300;
+}
+
+/* Custom Overrides for Dark Mode Typography if needed */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: var(--color-text-primary);
+  /* Ensure headings are readable in dark mode */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif text-brand-dark;
+  color: var(--color-brand-dark);
+  /* Use variable */
+}
+
+/* Update text-brand-dark utility behavior via variable */
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply bg-brand text-white px-8 py-3 rounded-none uppercase tracking-widest text-xs font-semibold hover:bg-brand-dark transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply border border-brand text-brand px-8 py-3 rounded-none uppercase tracking-widest text-xs font-semibold hover:bg-brand hover:text-white transition-all duration-300;
+}
+
+.glass-panel {
+  @apply bg-surface-glass backdrop-blur-md shadow-lg;
+}

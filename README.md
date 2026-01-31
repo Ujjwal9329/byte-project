@@ -99,26 +99,6 @@ npm run dev
 # Client runs on http://localhost:5173
 ```
 
----
-
-## 🤝 Contribution Guidelines
-
-We welcome contributions to **ByteSpark**! Please follow these steps to maintain the project structure and code quality:
-
-1.  **Fork & Clone**: Fork the repo and clone it locally.
-2.  **Create a Branch**: Always work on a separate branch for new features or bug fixes.
-    ```bash
-    git checkout -b feature/amazing-new-feature
-    ```
-3.  **Code Style**:
-    - Use meaningful variable and function names.
-    - Keep components small and reusable.
-    - Use directory aliases (if configured) or relative paths consistently.
-4.  **Commits**: Use clear, descriptive commit messages.
-    - `feat: Add new user profile page`
-    - `fix: Resolve layout issue on mobile`
-    - `docs: Update API documentation`
-5.  **Pull Request**: Push your changes and open a Pull Request (PR) to the `main` branch. Provide a detailed description of your changes.
 
 ---
 
